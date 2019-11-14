@@ -1,4 +1,4 @@
-# Kubernetes Developer Guide
+# Table of Contents
 
 The developer guide is for anyone wanting to either write code which directly accesses the
 Kubernetes API, or to contribute directly to the Kubernetes project.
@@ -8,17 +8,14 @@ Guide](http://kubernetes.io/docs/admin/).
 
 ## The process of developing and contributing code to the Kubernetes project
 
-* **On Collaborative Development** ([collab.md](collab.md)): Info on pull requests and code reviews.
+* **Contributor Guide**
+  ([Please start here](/contributors/guide/README.md)) to learn about how to contribute to Kubernetes
 
-* **GitHub Issues** ([issues.md](issues.md)): How incoming issues are reviewed and prioritized.
+* **GitHub Issues** ([/contributors/guide/issue-triage.md](/contributors/guide/issue-triage.md)): How incoming issues are triaged.
 
-* **Pull Request Process** ([pull-requests.md](pull-requests.md)): When and why pull requests are closed.
+* **Pull Request Process** ([/contributors/guide/pull-requests.md](/contributors/guide/pull-requests.md)): When and why pull requests are closed.
 
-* **Kubernetes On-Call Rotations** ([on-call-rotations.md](on-call-rotations.md)): Descriptions of on-call rotations for build and end-user support.
-
-* **Faster PR reviews** ([faster_reviews.md](faster_reviews.md)): How to get faster PR reviews.
-
-* **Getting Recent Builds** ([getting-builds.md](getting-builds.md)): How to get recent builds including the latest builds that pass CI.
+* **Getting Recent Builds** ([getting-builds.md](sig-release/getting-builds.md)): How to get recent builds including the latest builds that pass CI.
 
 * **Automated Tools** ([automation.md](automation.md)): Descriptions of the automation that is running on our github repository.
 
@@ -27,23 +24,26 @@ Guide](http://kubernetes.io/docs/admin/).
 
 * **Development Guide** ([development.md](development.md)): Setting up your development environment.
 
-* **Testing** ([testing.md](testing.md)): How to run unit, integration, and end-to-end tests in your development sandbox.
+* **Testing** ([testing.md](sig-testing/testing.md)): How to run unit, integration, and end-to-end tests in your development sandbox.
 
-* **Hunting flaky tests** ([flaky-tests.md](flaky-tests.md)): We have a goal of 99.9% flake free tests.
+* **Conformance Testing** ([conformance-tests.md](sig-architecture/conformance-tests.md))
+  What is conformance testing and how to create/manage them.
+
+* **Hunting flaky tests** ([flaky-tests.md](sig-testing/flaky-tests.md)): We have a goal of 99.9% flake free tests.
   Here's how to run your tests many times.
 
-* **Logging Conventions** ([logging.md](logging.md)): Glog levels.
+* **Logging Conventions** ([logging.md](sig-instrumentation/logging.md)): klog levels.
 
-* **Profiling Kubernetes** ([profiling.md](profiling.md)): How to plug in go pprof profiler to Kubernetes.
+* **Profiling Kubernetes** ([profiling.md](sig-scalability/profiling.md)): How to plug in go pprof profiler to Kubernetes.
 
 * **Instrumenting Kubernetes with a new metric**
-  ([instrumentation.md](instrumentation.md)): How to add a new metrics to the
+  ([instrumentation.md](sig-instrumentation/instrumentation.md)): How to add a new metrics to the
   Kubernetes code base.
 
-* **Coding Conventions** ([coding-conventions.md](coding-conventions.md)):
+* **Coding Conventions** ([coding-conventions.md](../guide/coding-conventions.md)):
   Coding style advice for contributors.
 
-* **Document Conventions** ([how-to-doc.md](how-to-doc.md))
+* **Document Conventions** ([The Kubernetes documentation](https://github.com/kubernetes/website))
   Document style advice for contributors.
 
 * **Running a cluster locally** ([running-locally.md](running-locally.md)):
@@ -57,10 +57,10 @@ Guide](http://kubernetes.io/docs/admin/).
 * **Annotations** ([Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)): are for attaching arbitrary non-identifying metadata to objects.
   Programs that automate Kubernetes objects may use annotations to store small amounts of their state.
 
-* **API Conventions** ([api-conventions.md](api-conventions.md)):
+* **API Conventions** ([api-conventions.md](sig-architecture/api-conventions.md)):
   Defining the verbs and resources used in the Kubernetes API.
 
-* **API Client Libraries** ([client-libraries.md](client-libraries.md)):
+* **API Client Libraries** ([Client Libraries](https://kubernetes.io/docs/reference/using-api/client-libraries/)):
   A list of existing client libraries, both supported and user-contributed.
 
 
@@ -69,17 +69,13 @@ Guide](http://kubernetes.io/docs/admin/).
 * **Authentication** ([Authentication](http://kubernetes.io/docs/admin/authentication/)):
   The current and planned states of authentication tokens.
 
-* **Authorization Plugins** ([Authorization](http://kubernetes.github.io/docs/admin/authorization/)):
+* **Authorization Plugins** ([Authorization](http://kubernetes.io/docs/admin/authorization/)):
   Authorization applies to all HTTP requests on the main apiserver port.
   This doc explains the available authorization implementations.
 
-* **Admission Control Plugins** ([admission_control](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/admission_control.md))
+* **Admission Control Plugins** ([admission_control](/contributors/design-proposals/api-machinery/admission_control.md))
 
 
 ## Building releases
 
 See the [kubernetes/release](https://github.com/kubernetes/release) repository for details on creating releases and related tools and helper scripts.
-
-<!-- BEGIN MUNGE: GENERATED_ANALYTICS -->
-[![Analytics](https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/devel/README.md?pixel)]()
-<!-- END MUNGE: GENERATED_ANALYTICS -->
